@@ -1,0 +1,107 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fdebed;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 12px 12px 20px #cbced1, 
+                -12px -12px 20px #ffff;
+    background: #ffe2e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display #screen {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    outline: none;
+    border: none;
+    text-align: right;
+    padding-right: .5em;
+    background: #ffe4e1;
+    border-radius: 6px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px #ffffff;
+    margin-bottom: 20px;
+}
+
+.btns {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btns .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.btns .row button {
+    flex: 1;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    margin: 5px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 8px #00000020, 
+                -5px -5px 8px #fbe9e9;
+    transition: .1s;
+    background: #fadadd;
+}
+
+.btns .row button:hover {
+    box-shadow: inset 5px 5px 8px rgba(16,16,16,.1),
+                inset -5px -5px 8px #fed6d6;
+    background: #ffc6d0;
+}
+
+#eval,
+#ac,
+#ce {
+    background: #fc739a;
+    color: #ffffff;
+    box-shadow: inset 5px 5px 8px rgba(16,16,16,.1),
+                inset -5px -5px 8px #f3d3d3;
+}
+
+#eval:hover, 
+#ac:hover,
+#ce:hover {
+    box-shadow: inset 5px 5px 8px #fe96be,
+                inset -5px -5px 8px #fc83c3;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .display #screen {
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .btns .row button {
+        height: 40px;
+        font-size: 14px;
+        margin: 3px;
+    }
+}
